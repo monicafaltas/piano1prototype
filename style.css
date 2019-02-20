@@ -12,15 +12,21 @@ body  {
   height: 100%;
 }
 
-/*.column--2 {
-	width: calc(10% - 8px);
-  /*height: 100%;*/
+/*DIFFERENTIATE KEY HEIGHT & MOVE BLACK/WHITE COLOR STYLES INTO HERE*/
+.white {
+  height:90vh;
 }
+
+.black {
+  height:50vh;
+
+}
+/*WHY ISNT IT WORKING THO AAAAAA*/
 
 
 html {
   font-size: 10px;
-  background: url(http://i.imgur.com/b9r5sEL.jpg) bottom center;
+  /*background: bottom center;*/
   background-size: cover;
 }
 
@@ -33,24 +39,24 @@ body,html {
 .keys {
   display: flex;
   flex: 1;
-  min-height: 100vh;
   align-items: center;
   justify-content: center;
+  align-items: flex-start; */
 }
 
 .key {
-  border: 3px solid black;
+  border: 4px solid black;
   border-radius: .5rem;
   margin: 1rem;
   font-size: 1.5rem;
   padding: 1rem .5rem;
   transition: all .07s ease;
   width: 10rem;
-  text-align: center;
+  /*text-align: center;*/
   color: white;
   background: rgba(0,0,0,0.4);
   text-shadow: 0 0 .5rem black;
-  height: 85%;
+
 }
 
 .playing {
@@ -61,11 +67,11 @@ body,html {
 
 kbd {
   display: block;
-  font-size: 4rem;
+  font-size: 40pt;
 }
 
 .sound {
-  font-size: 1.2rem;
+  font-size: 15pt;
   text-transform: none;
   letter-spacing: .1rem;
   color: gray;
@@ -85,3 +91,33 @@ kbd {
   line-height: 75px;
   font-size: 30px;
 }
+
+
+
+
+
+
+
+/*make black keys shorter height
+loading screen before piano shows (maybe keys pop up on screen one by one, or curtain?) */
+
+
+/*DO I EVEN WANT TO/HAVE TIME TO MAKE A MOBILE DESIGN? ITS NOT REQUIRED*/
+
+/*look up lock page orientation for mobile (stack overflow)*/
+
+/*@media query (max-width: )  (orientation:landscape) {
+
+html, body {
+
+
+}
+
+
+.flex-container {
+
+
+}
+
+
+}*/

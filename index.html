@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Piano 1 Prototype</title>
+  <title>Piano</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,68 +11,69 @@
 <div class="flex-container">
 
   <div class="keys">
-    <div data-key="65" class="key" style="background:white">
+    <div data-key="65" class="key white" style="background:white">
       <kbd>A</kbd>
       <span class="sound">C</span>
     </div>
 
-    <div data-key="87" class="key" style="background:black">
+    <div data-key="87" class="key black" style="background:black">
       <kbd>W</kbd>
       <span class="sound">C#</span>
     </div>
 
-    <div data-key="83" class="key" style="background:white">
+    <div data-key="83" class="key white " style="background:white">
       <kbd>S</kbd>
       <span class="sound">D</span>
     </div>
 
-    <div data-key="69" class="key" style="background:black">
+    <div data-key="69" class="key black" style="background:black">
       <kbd>E</kbd>
-      <span class="sound">D#</span>
+      <span class="sound">Eb</span>
     </div>
 
-    <div data-key="68" class="key" style="background:white">
+    <div data-key="68" class="key white" style="background:white">
       <kbd>D</kbd>
       <span class="sound">E</span>
     </div>
 
-    <div data-key="70" class="key"style="background:white">
+    <div data-key="70" class="key white"
+    style="background:white" >
       <kbd>F</kbd>
       <span class="sound">F</span>
     </div>
 
-    <div data-key="84" class="key" style="background:black">
+    <div data-key="84" class="key black" style="background:black">
       <kbd>T</kbd>
       <span class="sound">F#</span>
     </div>
 
-    <div data-key="71" class="key" style="background:white">
+    <div data-key="71" class="key white" style="background:white">
       <kbd>G</kbd>
       <span class="sound">G</span>
     </div>
 
-    <div data-key="89" class="key" style="background:black">
+    <div data-key="89" class="key black" style="background:black">
       <kbd>Y</kbd>
       <span class="sound">G#</span>
     </div>
 
-    <div data-key="72" class="key" style="background:white">
+    <div data-key="72" class="key white" style="background:white">
       <kbd>H</kbd>
       <span class="sound">A</span>
     </div>
 
-    <div data-key="85" class="key" style="background:black">
+    <div data-key="85" class="key black" style="background:black">
       <kbd>U</kbd>
       <span class="sound">Bb</span>
       <!-- CHANGE FONT SO Bb LOOKS RIGHT -->
     </div>
 
-    <div data-key="74" class="key" style="background:white">
+    <div data-key="74" class="key white" style="background:white">
       <kbd>J</kbd>
       <span class="sound">B</span>
     </div>
 
-    <div data-key="75" class="key" style="background:white">
+    <div data-key="75" class="key white" style="background:white">
       <kbd>K</kbd>
       <span class="sound">C</span>
     </div>
@@ -80,20 +81,20 @@
 
   </div>
 
-  <audio data-key="65" src="sounds/clap.wav"></audio>
-  <audio data-key="69" src="sounds/hihat.wav"></audio>
-  <audio data-key="83" src="sounds/hihat.wav"></audio>
-  <audio data-key="84" src="sounds/hihat.wav"></audio>
-  <audio data-key="85" src="sounds/hihat.wav"></audio>
-  <audio data-key="87" src="sounds/hihat.wav"></audio>
-  <audio data-key="89" src="sounds/hihat.wav"></audio>
-  <audio data-key="68" src="sounds/kick.wav"></audio>
-  <audio data-key="70" src="sounds/openhat.wav"></audio>
-  <audio data-key="71" src="sounds/boom.wav"></audio>
-  <audio data-key="72" src="sounds/ride.wav"></audio>
-  <audio data-key="74" src="sounds/snare.wav"></audio>
-  <audio data-key="75" src="sounds/tom.wav"></audio>
-  <audio data-key="76" src="sounds/tink.wav"></audio>
+  <audio data-key="65" src="sounds/C.wav"></audio>
+  <audio data-key="87" src="sounds/Csharp.wav"></audio>
+  <audio data-key="83" src="sounds/D.wav"></audio>
+  <audio data-key="69" src="sounds/E.wav"></audio>
+  <audio data-key="68" src="sounds/Eb.wav"></audio>
+  <audio data-key="70" src="sounds/F.wav"></audio>
+  <audio data-key="84" src="sounds/Fsharp.wav"></audio>
+  <audio data-key="71" src="sounds/G.wav"></audio>
+  <audio data-key="89" src="sounds/Gsharp.wav"></audio>
+  <audio data-key="72" src="sounds/A.wav"></audio>
+  <audio data-key="85" src="sounds/Bb.wav"></audio>
+  <audio data-key="74" src="sounds/B.wav"></audio>
+  <audio data-key="75" src="sounds/topc.wav"></audio>
+
 
 <script>
   function removeTransition(e) {
@@ -101,6 +102,7 @@
     e.target.classList.remove('playing');
   }
   function playSound(e) {
+    console.log(e)
     const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
     const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
     if (!audio) return;
