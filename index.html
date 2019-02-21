@@ -11,69 +11,69 @@
 <div class="flex-container">
 
   <div class="keys">
-    <div data-key="65" class="key white" style="background:white">
+    <div id="1" data-key="65" class="key white" style="background:white">
       <kbd>A</kbd>
       <span class="sound">C</span>
     </div>
 
-    <div data-key="87" class="key black" style="background:black">
+    <div id="2" data-key="87" class="key black" style="background:black">
       <kbd>W</kbd>
       <span class="sound">C#</span>
     </div>
 
-    <div data-key="83" class="key white " style="background:white">
+    <div id="3" data-key="83" class="key white " style="background:white">
       <kbd>S</kbd>
       <span class="sound">D</span>
     </div>
 
-    <div data-key="69" class="key black" style="background:black">
+    <div id="4" data-key="69" class="key black" style="background:black">
       <kbd>E</kbd>
       <span class="sound">Eb</span>
     </div>
 
-    <div data-key="68" class="key white" style="background:white">
+    <div id="5" data-key="68" class="key white" style="background:white">
       <kbd>D</kbd>
       <span class="sound">E</span>
     </div>
 
-    <div data-key="70" class="key white"
+    <div id="6" data-key="70" class="key white"
     style="background:white" >
       <kbd>F</kbd>
       <span class="sound">F</span>
     </div>
 
-    <div data-key="84" class="key black" style="background:black">
+    <div id="7" data-key="84" class="key black" style="background:black">
       <kbd>T</kbd>
       <span class="sound">F#</span>
     </div>
 
-    <div data-key="71" class="key white" style="background:white">
+    <div id="8" data-key="71" class="key white" style="background:white">
       <kbd>G</kbd>
       <span class="sound">G</span>
     </div>
 
-    <div data-key="89" class="key black" style="background:black">
+    <div id="9" data-key="89" class="key black" style="background:black">
       <kbd>Y</kbd>
       <span class="sound">G#</span>
     </div>
 
-    <div data-key="72" class="key white" style="background:white">
+    <div id="10" data-key="72" class="key white" style="background:white">
       <kbd>H</kbd>
       <span class="sound">A</span>
     </div>
 
-    <div data-key="85" class="key black" style="background:black">
+    <div id="11" data-key="85" class="key black" style="background:black">
       <kbd>U</kbd>
       <span class="sound">Bb</span>
       <!-- CHANGE FONT SO Bb LOOKS RIGHT -->
     </div>
 
-    <div data-key="74" class="key white" style="background:white">
+    <div id="12" data-key="74" class="key white" style="background:white">
       <kbd>J</kbd>
       <span class="sound">B</span>
     </div>
 
-    <div data-key="75" class="key white" style="background:white">
+    <div id="13" data-key="75" class="key white" style="background:white">
       <kbd>K</kbd>
       <span class="sound">C</span>
     </div>
@@ -97,6 +97,60 @@
 
 
 <script>
+
+document.getElementById("1").style.display = "none";
+document.getElementById("2").style.display = "none";
+document.getElementById("3").style.display = "none";
+document.getElementById("4").style.display = "none";
+document.getElementById("5").style.display = "none";
+document.getElementById("6").style.display = "none";
+document.getElementById("7").style.display = "none";
+document.getElementById("8").style.display = "none";
+document.getElementById("9").style.display = "none";
+document.getElementById("10").style.display = "none";
+document.getElementById("11").style.display = "none";
+document.getElementById("12").style.display = "none";
+document.getElementById("13").style.display = "none";
+setTimeout(function() {
+  document.getElementById("1").style.display = null;
+}, 500);
+setTimeout(function() {
+  document.getElementById("2").style.display = null;
+}, 1000);
+setTimeout(function() {
+  document.getElementById("3").style.display = null;
+}, 1500);
+setTimeout(function() {
+  document.getElementById("4").style.display = null;
+}, 2000);
+setTimeout(function() {
+  document.getElementById("5").style.display = null;
+}, 2500);
+setTimeout(function() {
+  document.getElementById("6").style.display = null;
+}, 3000);
+setTimeout(function() {
+  document.getElementById("7").style.display = null;
+}, 3500);
+setTimeout(function() {
+  document.getElementById("8").style.display = null;
+}, 4000);
+setTimeout(function() {
+  document.getElementById("9").style.display = null;
+}, 4500);
+setTimeout(function() {
+  document.getElementById("10").style.display = null;
+}, 5000);
+setTimeout(function() {
+  document.getElementById("11").style.display = null;
+}, 5500);
+setTimeout(function() {
+  document.getElementById("12").style.display = null;
+}, 6000);
+setTimeout(function() {
+  document.getElementById("13").style.display = null;
+}, 6500);
+
   function removeTransition(e) {
     if (e.propertyName !== 'transform') return;
     e.target.classList.remove('playing');
@@ -113,15 +167,11 @@
   const keys = Array.from(document.querySelectorAll('.key'));
   keys.forEach(key => key.addEventListener('transitionend', removeTransition));
   window.addEventListener('keydown', playSound);
+
+
+
 </script>
 
 
 </body>
-</html>
-
-
-
-
-
-	</body>
 </html>
